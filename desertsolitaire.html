@@ -1,1 +1,35 @@
-<img src='https://cloud.githubusercontent.com/assets/22150913/18551265/f2ec99e4-7b57-11e6-93fc-1c809d9c335c.jpg'/><br>
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+* {
+  padding: 0;
+  margin: 0;
+}
+.fit {
+  max-width: 100%;
+  max-height: 100%;
+}
+.center {
+  display: block;
+  margin: auto;
+}
+</style>
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script type="text/javascript" language="JavaScript">
+function set_body_height()
+{
+    var wh = $(window).height();
+    $('body').attr('style', 'height:' + wh + 'px;');
+}
+$(document).ready(function() {
+    set_body_height();
+    $(window).bind('resize', function() { set_body_height(); });
+});
+</script>
+</head>
+<body>
+<img id="the_pic" class="center fit" src="https://cloud.githubusercontent.com/assets/22150913/18551265/f2ec99e4-7b57-11e6-93fc-1c809d9c335c.jpg" >    
+</body>
+</html>
