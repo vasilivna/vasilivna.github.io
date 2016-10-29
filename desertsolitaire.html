@@ -1,23 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  * {
+    padding: 0;
+    margin: 0;
+  }
+  .fit { /* set relative picture size */
+    max-width: 100%;
+    max-height: 100%;
+  }
+  .center {
+    display: block;
+    margin: auto;
+  }
+</style>
+</head>
+<body>
 
-<!DOCTYPE html> 
-<html lang="en"> 
-	<head> 
-		<title>Adjust Photo on Browser Window</title> 
-		<meta charset="utf-8"> 
-		<script src="http://code.jquery.com/jquery-latest.js"></script> 
-		<script src="jquery-photo-resize.js"></script>
-		<script type="text/javascript" charset="utf-8">
-			$(document).ready(function() {
-				$("img").photoResize({
-					bottomSpacing: 15
-				});
-			});
-		</script>
-		<style type="text/css" media="screen">
-			body { text-align: center; }
-		</style>
-	</head> 
-	<body>
-		<img src="https://cloud.githubusercontent.com/assets/22150913/18551265/f2ec99e4-7b57-11e6-93fc-1c809d9c335c.jpg" alt="">
-	</body> 
+<img class="center fit" src="https://cloud.githubusercontent.com/assets/22150913/18551265/f2ec99e4-7b57-11e6-93fc-1c809d9c335c.jpg" >    
+
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script type="text/javascript" language="JavaScript">
+  function set_body_height() { // set body height = window height
+    $('body').height($(window).height());
+  }
+  $(document).ready(function() {
+    $(window).bind('resize', set_body_height);
+    set_body_height();
+  });
+</script>
+
+</body>
 </html>
