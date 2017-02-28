@@ -1,41 +1,35 @@
-<!DOCTYPE html>
-<html>
-<head>
- <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-87616820-1', 'auto');
-  ga('send', 'pageview');
-
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Unity WebGL Player | Bilibin</title>
+    <link rel="stylesheet" href="TemplateData/style.css">
+    <link rel="shortcut icon" href="TemplateData/favicon.ico" />
+    <script src="TemplateData/UnityProgress.js"></script>
+  </head>
+  <body class="template">
+    <div class="template-wrap clear">
+      <canvas class="emscripten" id="canvas" oncontextmenu="event.preventDefault()" height="600px" width="960px"></canvas>
+      <br>
+      <div class="logo"></div>
+      <div class="fullscreen"><img src="TemplateData/fullscreen.png" width="38" height="38" alt="Fullscreen" title="Fullscreen" onclick="SetFullscreen(1);" /></div>
+      <div class="title">Bilibin</div>
+    </div>
+    <script type='text/javascript'>
+  var Module = {
+    TOTAL_MEMORY: 268435456,
+    errorhandler: null,			// arguments: err, url, line. This function must return 'true' if the error is handled, otherwise 'false'
+    compatibilitycheck: null,
+    backgroundColor: "#222C36",
+    splashStyle: "Light",
+    dataUrl: "Release/Test Build.data",
+    codeUrl: "Release/Test Build.js",
+    asmUrl: "Release/Test Build.asm.js",
+    memUrl: "Release/Test Build.mem",
+  };
 </script>
- </head>
-<body>
- <br><br><br><div align="right">
- 
-  <a href="vasilivna.github.io/publish.html"><img src="https://cloud.githubusercontent.com/assets/22150913/20391429/9ecc7138-acd3-11e6-817c-d5d576078ab7.gif"></a><br>
-Still there are seeds to be gathered and room in the bag of stars. <br>
- - Ursula K. Le Guin, <i> <a href="https://www.marxists.org/subject/art/lit_crit/works/leguin/carrier-bag.htm">The Carrier-Bag Theory of Fiction </a></i> <br><br><br>
-<i>n</i>-dimensional niche space for multispecies becoming-with. <br>
- ... <br>
-To renew the biodiverse powers of terra is the sympoietic work and play of the Chthulucene. <br>
- - Donna Haraway, <i> Staying with the Trouble </i>. <br> <br>
- 
+<script src="Release/UnityLoader.js"></script>
 
- <a href="vasilivna.github.io/8_soothing_seconds.html">8 soothing seconds</a><br>
-  <a href="vasilivna.github.io/arches_landscapes.html">arches_landscapes</a><br>
- <a href="https://vasilivna.github.io/untitled.html">untitled</a><br>
- <a href="https://vasilivna.github.io/pieces.html">pieces</a><br>
-<a href="https://www.youtube.com/channel/UChMnYe0Zf49HEn44Lb8Kwfg">asmr/bdsmr plants</a><br>
-<a href="https://vasilivna.github.io/desertsolitaire.html">desert solitaire</a><br>
-<a href="https://vasilivna.github.io/love_has_turned">alliaria petiolata</a><br>
- <a href="https://vasilivna.github.io/further_reading">further reading</a><br>
- 
- </div>
-
-
-<img src='https://cloud.githubusercontent.com/assets/22150913/20392094/a3d93c80-acd6-11e6-9323-3b82ee2f1ec7.gif' /><br>
-</body>
+  </body>
 </html>
