@@ -1,0 +1,20 @@
+auto: true
+server: true
+permalink: none
+baseurl: ""
+exclude:
+- .gitignore
+- README.md
+
+prose:
+  rooturl: "_posts"
+  metadata: 
+    _posts/: |
+      published: false
+      layout: article
+      title: Post Title 
+      abstract: Short summary of the post
+      author_twitter: msanchezmora
+      author: Magda Sánchez
+      categories:
+      - articles

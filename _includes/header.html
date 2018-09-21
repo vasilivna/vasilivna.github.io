@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='UTF-8'/>
+  <title>colaborativa.eu &middot; Plantilla Básica Jekyll</title>
+  <link rel='shortcut icon' href='{{site.baseurl}}/images/favicon.ico' type='image/x-icon' />
+  <link rel='stylesheet' href='{{site.baseurl}}/fonts/open-sans.css'>
+  <link rel='stylesheet' href='{{site.baseurl}}/app.css'>
+</head>
+<body>
+  <div id='container'>
+
+<!-- Top Navigation Bar with link to pages (files with .md extension located at _posts/ 
+     with category equal to pages).
+     The order in which they appear has to do with the date on its filename  -->
+    <div id="header">
+      <div class="navigation">
+        <a href="{{site.baseurl}}" class="title">Home </a>
+        {% for item in site.categories.pages limit:5 offset:0 %}
+          <a href="{{site.baseurl}}{{item.url}}" class="title"> &middot; {{item.title}}</a>
+        {% endfor %}
+      </div>
+    </div>
+  
