@@ -5,7 +5,11 @@ body {
 
 @media screen and (orientation:portrait) { 
     body {
-        font-size: 7mm; 
+        font-size: 8mm; 
+    }
+
+    div.column {
+      margin: 1ch;
     }
 }
 
@@ -13,19 +17,25 @@ body {
     body {
         font-size: 5mm; 
     }
+
+    div.column {
+      width: 50ch;
+      margin-left: auto;
+      margin-right: auto;
+    }
 }
 
-div.column {
-  width: 50ch;
+/*div.column {
   margin-left: auto;
   margin-right: auto;
-}
+}*/
 
 .permalink {
     font-style: italic;
 }
 
 img {
-  max-width: 100%;
+  display: blok;
+  width: 100%;
   max-height: auto;
 }
