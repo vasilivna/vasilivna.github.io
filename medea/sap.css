@@ -1,0 +1,41 @@
+
+body {
+  font-family: Arial, sans;
+}
+
+@media screen and (orientation:portrait) { 
+    body {
+        font-size: 8mm; 
+    }
+
+    div.column {
+      margin: 1ch;
+    }
+}
+
+@media screen and (orientation:landscape) { 
+    body {
+        font-size: 5mm; 
+    }
+
+    div.column {
+      width: 50ch;
+      margin-left: auto;
+      margin-right: auto;
+    }
+}
+
+/*div.column {
+  margin-left: auto;
+  margin-right: auto;
+}*/
+
+.permalink {
+    font-style: italic;
+}
+
+img {
+  display: blok;
+  width: 100%;
+  max-height: auto;
+}
