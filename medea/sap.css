@@ -39,3 +39,15 @@ img {
   width: 100%;
   max-height: auto;
 }
+
+a:link {
+  color: rgb(167, 23, 47);
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:visited {
+  color: pink;
+  background-color: transparent;
+  text-decoration: none;
+}
