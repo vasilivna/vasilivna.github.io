@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -28,10 +29,17 @@
 
     <script>
         function initMap() {
-            var targetLocation = { lat: 50.4541435, lng: 30.50492 };
+            var targetLocation = { lat: 50.451683, lng: 30.518379 };
             var map = new google.maps.Map(document.getElementById('map'), {
                 center: targetLocation,
                 zoom: 15
+            });
+
+            // Add marker for target location
+            var marker = new google.maps.Marker({
+                position: targetLocation,
+                map: map,
+                title: 'Target Location'
             });
 
             // Fetch visitor's geolocation
@@ -57,6 +65,7 @@
             }
         }
     </script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=geometry&callback=initMap" async defer></script>
+    
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD8tdYlUM5TqdawZHTNxXMlbAAkxcGa4Vo&libraries=geometry&callback=initMap" async defer></script>
 </body>
 </html>
