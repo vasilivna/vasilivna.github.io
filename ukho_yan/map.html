@@ -34,7 +34,7 @@ body {
     background-color: #ffffff;
     border: none;
     color: rgb(0, 0, 0);
-    padding: 15px 32px;
+    padding: 15px 10px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -67,14 +67,30 @@ body {
 <body>
   <div id="map"></div>
   <button id="listenButton" style="width: 200px;">LISTEN</button>
-  <div id="message">please proceed to the location <br> shown on the map</p>
+  <div id="message">turn on your location services, <br> go to the location shown on the map, <br> and press LISTEN</p>
+<script>
 
-  <script>
-    // Target location coordinates
-    var targetLatitude = 50.454749;
-    var targetLongitude = 30.506263;
+// Target location coordinates
+var targetLatitude = 50.454749;
+var targetLongitude = 30.506263;
 
-    // Function to check visitor's geolocation
+// Call checkLocationServices function
+function checkLocationServices() {
+  if (navigator.geolocation) {
+    navigator.permissions.query({ name: 'geolocation' }).then(function(result) {
+      if (result.state === 'granted') {
+        // Location services are turned on
+        checkGeolocation();
+      } 
+      else if (result.state === 'denied') {
+        // Location services are turned off
+        document.getElementById("message").innerHTML = "Turn on your location services.";
+      }
+    });
+  }
+}
+
+// Function to check visitor's geolocation
     function checkGeolocation() {
       if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(function(position) {
@@ -89,7 +105,7 @@ body {
             window.location.href = "death_in_june.m4a";
           } else {
             // Display message
-            document.getElementById("message").innerHTML = "turn on your location services, <br> go to the location shown on the map, <br> and press LISTEN";
+            document.getElementById("message").innerHTML = "<span style='color: red;'>go to the location shown on the map, <br> and press LISTEN</span>";
           }
         });
       } else {
