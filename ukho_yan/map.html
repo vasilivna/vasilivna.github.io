@@ -78,7 +78,7 @@ var targetLongitude = 30.506263;
 function checkLocationServices() {
   if (navigator.geolocation) {
     navigator.permissions.query({ name: 'geolocation' }).then(function(result) {
-      if (result.state === 'granted') {
+      if (result.state === 'granted' || result.state === 'prompt') {
         // Location services are turned on
         checkGeolocation();
       } 
@@ -150,6 +150,10 @@ function checkLocationServices() {
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD8tdYlUM5TqdawZHTNxXMlbAAkxcGa4Vo&callback=initMap" async defer></script>
   <script>
     document.getElementById("listenButton").addEventListener("click", checkGeolocation);
+
+    window.onload = function() {
+      checkLocationServices();
+    };
   </script>
 </body>
 </html>
